@@ -1,0 +1,13 @@
+version: "3.1"
+
+services:
+  db:
+    build:
+      context: ./
+      dockerfile: db.dockerfile
+    ports:
+      - 5432:5432
+    healthcheck:
+      test: pg_isready -U postgres -d sample_app -h 127.0.0.1
+      interval: 1s
+      retries: 10
