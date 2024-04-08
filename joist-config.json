@@ -1,0 +1,6 @@
+{
+  "codegenPlugins": [],
+  "entities": { "Author": { "tag": "a" }, "Book": { "tag": "b" } },
+  "entitiesDirectory": "./entities",
+  "version": "1.153.2"
+}
