@@ -1,8 +1,8 @@
-import Table from '@/components/table'
-import TablePlaceholder from '@/components/table-placeholder'
-import { Suspense } from 'react'
+import { Table } from "@/components/table";
+import { TablePlaceholder } from "@/components/table-placeholder";
+import { Suspense } from "react";
 
-export const dynamic = 'force-dynamic'
+export const dynamic = "force-dynamic";
 
 export default function Home() {
   return (
@@ -11,5 +11,5 @@ export default function Home() {
         <Table />
       </Suspense>
     </main>
-  )
+  );
 }

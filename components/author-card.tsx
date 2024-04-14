@@ -16,7 +16,9 @@ export async function AuthorCard(props: AuthorCardProps) {
       <div className="flex items-center space-x-4">
         <div className="space-y-1">
           <p className="font-medium leading-none">{author.firstName}</p>
-          <p className="text-sm text-gray-500">{author.books.get.length} books</p>
+          <p className="text-sm text-gray-500">
+            {author.books.get.length} books
+          </p>
         </div>
       </div>
     </div>

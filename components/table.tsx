@@ -1,12 +1,13 @@
 import { AuthorCard } from "@/components/author-card";
 import { Author } from "@/entities/index";
 import { getEm } from "@/lib/em";
-import RefreshButton from "./refresh-button";
+import { RefreshButton } from "./refresh-button";
 
-export default async function Table() {
+export async function Table() {
   console.log("RENDERING TABLE");
   const startTime = Date.now();
   const em = getEm();
+  // Issues 1 query to fetch author + books
   const users = await em.find(Author, {}, { populate: ["books"] });
   const duration = Date.now() - startTime;
 
