@@ -525,7 +525,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@dprint/formatter@npm:^0.2.0":
+"@dprint/formatter@npm:^0.2.1":
   version: 0.2.1
   resolution: "@dprint/formatter@npm:0.2.1"
   checksum: 10c0/8f0db6142aa364ea4b3ff04997587a4ab123c79f20d9f4c2728399ce2bd0b3058865f8ab513979f8e25fab92ce4495dc4226551b4167408fec9a185bfe68518d
@@ -1084,7 +1084,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/semver@npm:^7.5.6":
+"@types/semver@npm:^7.5.8":
   version: 7.5.8
   resolution: "@types/semver@npm:7.5.8"
   checksum: 10c0/8663ff927234d1c5fcc04b33062cb2b9fcfbe0f5f351ed26c4d1e1581657deebd506b41ff7fdf89e787e3d33ce05854bc01686379b89e9c49b564c4cfa988efa
@@ -3746,75 +3746,75 @@ __metadata:
   languageName: node
   linkType: hard
 
-"joist-codegen@npm:^1.155.2":
-  version: 1.155.2
-  resolution: "joist-codegen@npm:1.155.2"
+"joist-codegen@npm:^1.155.4":
+  version: 1.155.4
+  resolution: "joist-codegen@npm:1.155.4"
   dependencies:
-    "@dprint/formatter": "npm:^0.2.0"
+    "@dprint/formatter": "npm:^0.2.1"
     "@dprint/json": "npm:0.15.6"
     "@types/inquirer": "npm:^8.2.10"
     "@types/jscodeshift": "npm:^0.11.11"
     "@types/pluralize": "npm:0.0.33"
-    "@types/semver": "npm:^7.5.6"
+    "@types/semver": "npm:^7.5.8"
     change-case: "npm:^4.1.2"
     fast-glob: "npm:^3.3.2"
     inquirer: "npm:^8.2.6"
-    joist-utils: "npm:1.155.2"
-    jscodeshift: "npm:^0.15.1"
+    joist-utils: "npm:1.155.4"
+    jscodeshift: "npm:^0.15.2"
     knex: "npm:^3.1.0"
     pg: "npm:^8.11.5"
     pg-structure: "npm:^7.15.2"
     pluralize: "npm:^8.0.0"
-    semver: "npm:^7.5.4"
+    semver: "npm:^7.6.0"
     ts-poet: "npm:^6.8.1"
     zod: "npm:^3.22.4"
-  checksum: 10c0/af41ccb5bc1ae0bc642b126587afcc253ea0a0769f6850458981ebffb13350818be6178cf188ae50ee24ff5dcd428422f2eb50a9aa7a2b264245c7003f996b5c
+  checksum: 10c0/b4a6f7727973cbe6496120229425d7cbf157c368b7faf1308761be427e28641a4cb3ef0105e8749a5264114468301baead264d8cb8d1162e1cf6a7762d1f24a0
   languageName: node
   linkType: hard
 
-"joist-orm@npm:1.155.2, joist-orm@npm:^1.155.2":
-  version: 1.155.2
-  resolution: "joist-orm@npm:1.155.2"
+"joist-orm@npm:1.155.4, joist-orm@npm:^1.155.4":
+  version: 1.155.4
+  resolution: "joist-orm@npm:1.155.4"
   dependencies:
     "@types/object-hash": "npm:^3.0.6"
     dataloader: "npm:^2.2.2"
-    joist-utils: "npm:1.155.2"
+    joist-utils: "npm:1.155.4"
     knex: "npm:^3.1.0"
     object-hash: "npm:^3.0.0"
     pg: "npm:^8.11.5"
     pg-types: "npm:^4.0.2"
-  checksum: 10c0/e7d25b4b52bd7e818ab883ea0a6128b89af40a41fa3656baf0ef55d445e5f75711ed51e8a77f95153c1d4ccb0d3f209383da2efbc2875ae8af474336c11c1cf5
+  checksum: 10c0/f8e2d6116cafc4837afa141393664cb32bf97e6eab62145ef5d4fd3c847b0c892a4c3f8022966d566ec630b6661d7260533842ed6712a7a7642bd2afe8152f43
   languageName: node
   linkType: hard
 
-"joist-plugin-join-preloading@npm:^1.155.2":
-  version: 1.155.2
-  resolution: "joist-plugin-join-preloading@npm:1.155.2"
+"joist-plugin-join-preloading@npm:^1.155.4":
+  version: 1.155.4
+  resolution: "joist-plugin-join-preloading@npm:1.155.4"
   dependencies:
     graphql: "npm:^16.8.1"
-    joist-orm: "npm:1.155.2"
-    joist-test-utils: "npm:1.155.2"
-  checksum: 10c0/e96b46b7f78eab9c3a0b53f237182fb9ea2d3228ad30da2d9c417464102e36bd28a3ae23063bb796167f30dcfdc6b379284b219e42541238377e7bdc43560572
+    joist-orm: "npm:1.155.4"
+    joist-test-utils: "npm:1.155.4"
+  checksum: 10c0/020233ecf06f21f29413a514454ed265abab805d77bb720c7993848bdc8e7c40b3e0b7db6797e21080e84ef7bdf85c8cf692e88e88d6a122f8966acf612c42e2
   languageName: node
   linkType: hard
 
-"joist-test-utils@npm:1.155.2":
-  version: 1.155.2
-  resolution: "joist-test-utils@npm:1.155.2"
+"joist-test-utils@npm:1.155.4":
+  version: 1.155.4
+  resolution: "joist-test-utils@npm:1.155.4"
   dependencies:
-    joist-orm: "npm:1.155.2"
-    joist-utils: "npm:1.155.2"
-  checksum: 10c0/0fb296b931dd6ca7a5b842a84b119c320e30bc1ca5cfd0c428f923bc90f05ffa2568efcfdbb80ffe76a66111aaca9a3f19097e78940a29656c6ad72605f20445
+    joist-orm: "npm:1.155.4"
+    joist-utils: "npm:1.155.4"
+  checksum: 10c0/98739fbbef9f46ffa4c029bfafc0fafe86f23923b14d39fc68b815ee84f48438df9520b8e1862bfc39ccefd3864e4947cdf3eab32271bc1161849a148f340a7e
   languageName: node
   linkType: hard
 
-"joist-utils@npm:1.155.2":
-  version: 1.155.2
-  resolution: "joist-utils@npm:1.155.2"
+"joist-utils@npm:1.155.4":
+  version: 1.155.4
+  resolution: "joist-utils@npm:1.155.4"
   dependencies:
     pg: "npm:^8.11.5"
-    pg-connection-string: "npm:^2.6.2"
-  checksum: 10c0/671f9236e5de821ddb4e69628f7423d0674a8cfb4e95049d405d98886b8631c8619b8e0b97c92fd3b2643c1520fcb44a17899b12898c2ce23084181f8bc1cfd7
+    pg-connection-string: "npm:^2.6.4"
+  checksum: 10c0/9abd2f62fb8e7eeb28ba63bcb04be125e42f9e2792634441cf38c60ed515695a0cac5ec93d68d1090a12b186de3dc14afe846f77034de505bc65dfe283e41339
   languageName: node
   linkType: hard
 
@@ -3843,7 +3843,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jscodeshift@npm:^0.15.1":
+"jscodeshift@npm:^0.15.2":
   version: 0.15.2
   resolution: "jscodeshift@npm:0.15.2"
   dependencies:
@@ -4824,7 +4824,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pg-connection-string@npm:^2.2.1, pg-connection-string@npm:^2.6.2, pg-connection-string@npm:^2.6.4":
+"pg-connection-string@npm:^2.2.1, pg-connection-string@npm:^2.6.4":
   version: 2.6.4
   resolution: "pg-connection-string@npm:2.6.4"
   checksum: 10c0/0d0b617df0fc6507bf6a94bdcd56c7a305788a1402d69bff9773350947c8f525d6d8136128065370749a3325e99658ae40fbdcce620fb8e60126181f0591a6a6
@@ -5160,9 +5160,9 @@ __metadata:
     env-cmd: "npm:^10.1.0"
     eslint: "npm:9.0.0"
     eslint-config-next: "npm:14.2.1"
-    joist-codegen: "npm:^1.155.2"
-    joist-orm: "npm:^1.155.2"
-    joist-plugin-join-preloading: "npm:^1.155.2"
+    joist-codegen: "npm:^1.155.4"
+    joist-orm: "npm:^1.155.4"
+    joist-plugin-join-preloading: "npm:^1.155.4"
     ms: "npm:^2.1.3"
     next: "npm:14.2.1"
     postcss: "npm:8.4.38"
@@ -5562,7 +5562,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.3.5, semver@npm:^7.5.4":
+"semver@npm:^7.3.5, semver@npm:^7.5.4, semver@npm:^7.6.0":
   version: 7.6.0
   resolution: "semver@npm:7.6.0"
   dependencies:
