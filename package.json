@@ -35,6 +35,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "copy-and-watch": "latest",
     "prettier": "^3.2.5"
   },
   "packageManager": "yarn@4.1.1"
