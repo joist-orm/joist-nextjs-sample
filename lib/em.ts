@@ -1,5 +1,6 @@
 import { EntityManager } from "@/entities/index";
 import { newPgConnectionConfig, PostgresDriver } from "joist-orm";
+import { JsonAggregatePreloader } from "joist-plugin-join-preloading";
 import { knex as createKnex } from "knex";
 
 const knex = createKnex({
@@ -11,5 +12,6 @@ const knex = createKnex({
 
 export function newEm(): EntityManager {
   const driver = new PostgresDriver(knex);
-  return new EntityManager({}, driver);
+  const preloadPlugin = new JsonAggregatePreloader();
+  return new EntityManager({}, { driver, preloadPlugin });
 }

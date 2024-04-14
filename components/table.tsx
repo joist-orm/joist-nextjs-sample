@@ -6,7 +6,7 @@ import RefreshButton from "./refresh-button";
 export default async function Table() {
   const startTime = Date.now();
   const em = newEm();
-  const users = await em.find(Author, {});
+  const users = await em.find(Author, {}, { populate: "books"});
   const duration = Date.now() - startTime;
 
   return (
