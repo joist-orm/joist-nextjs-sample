@@ -1,12 +1,12 @@
 import { AuthorCard } from "@/components/author-card";
 import { Author } from "@/entities/index";
-import { newEm } from "@/lib/em";
+import { getEm } from "@/lib/em";
 import RefreshButton from "./refresh-button";
 
 export default async function Table() {
   const startTime = Date.now();
-  const em = newEm();
-  const users = await em.find(Author, {}, { populate: "books"});
+  const em = getEm();
+  const users = await em.find(Author, {}, { populate: ["books"] });
   const duration = Date.now() - startTime;
 
   return (
