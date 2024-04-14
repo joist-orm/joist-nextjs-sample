@@ -4,6 +4,7 @@ import { getEm } from "@/lib/em";
 import RefreshButton from "./refresh-button";
 
 export default async function Table() {
+  console.log("RENDERING TABLE");
   const startTime = Date.now();
   const em = getEm();
   const users = await em.find(Author, {}, { populate: ["books"] });
