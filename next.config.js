@@ -4,7 +4,7 @@ const nextConfig = {
     domains: ['images.ctfassets.net'],
   },
   experimental: {
-    serverComponentsExternalPackages: ['knex', 'superstruct'],
+    serverComponentsExternalPackages: ['knex', 'superstruct', 'joist-orm'],
   },
 }
 
