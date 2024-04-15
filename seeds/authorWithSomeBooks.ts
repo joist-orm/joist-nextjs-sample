@@ -1,20 +1,7 @@
 import { EntityManager, newAuthor } from "@/entities/index";
-import { newPgConnectionConfig, PostgresDriver } from "joist-orm";
-import { knex as createKnex } from "knex";
-import "dotenv/config";
+import { seed } from "joist-test-utils";
 
-const knex = createKnex({ client: "pg", connection: newPgConnectionConfig() });
-const driver = new PostgresDriver(knex);
-const em = new EntityManager({}, { driver });
-
-async function seed() {
-  await knex.select(knex.raw("flush_database()"));
+seed<EntityManager>(async (em) => {
   newAuthor(em, { firstName: "a1", books: [{}, {}, {}] });
-  newAuthor(em, { firstName: "a2", books: [{}, {}] });
-  await em.flush();
-}
-
-seed().then(() => {
-  console.log("Seeded!");
-  return knex.destroy();
+  newAuthor(em, { firstName: "a3", books: [{}, {}] });
 });
