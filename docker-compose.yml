@@ -11,3 +11,5 @@ services:
       test: pg_isready -U postgres -d sample_app -h 127.0.0.1
       interval: 1s
       retries: 10
+    volumes:
+      - ./db-schema.sql:/db-schema.sql
