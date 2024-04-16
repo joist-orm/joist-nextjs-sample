@@ -1,13 +1,11 @@
-import { Author, EntityManager } from "@/entities/index";
+"use client";
 
 type AuthorCardProps = {
-  // Get this from a context
-  em: EntityManager;
-  author: Author;
+  author: { firstName: string; books: readonly { title: string }[] };
+  addBook: () => void;
 };
 
-export async function AuthorCard(props: AuthorCardProps) {
-  const author = await props.author.populate("books");
+export async function AuthorCard({ author, addBook }: AuthorCardProps) {
   return (
     <div
       key={author.firstName}
@@ -16,9 +14,10 @@ export async function AuthorCard(props: AuthorCardProps) {
       <div className="flex items-center space-x-4">
         <div className="space-y-1">
           <p className="font-medium leading-none">{author.firstName}</p>
-          <p className="text-sm text-gray-500">
-            {author.books.get.length} books
-          </p>
+          <p className="text-sm text-gray-500">{author.books.length} books</p>
+          <button className="text-sm text-gray-500" onClick={() => addBook()}>
+            add book
+          </button>
         </div>
       </div>
     </div>
