@@ -34,6 +34,8 @@ export async function Table() {
         {users.map((user) => (
           <AuthorCard
             key={user.id}
+            // Currently have to craft the AuthorCard.author props manually, since
+            // the entity itself can't go over the wire.
             author={{ firstName: user.firstName, books: user.books.get }}
             addBook={addBook}
           />
