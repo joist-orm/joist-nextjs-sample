@@ -4,6 +4,8 @@ import { getEm } from "@/lib/em";
 import { JsonHint, JsonPayload } from "joist-orm";
 import { RefreshButton } from "./refresh-button";
 
+// The const needs to be defined on the server, otherwise if the client tries
+// to define it, and the server-side imports it, it turns into some sort of proxy.
 export const authorHint = {
   id: {},
   firstName: {},
