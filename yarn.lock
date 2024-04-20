@@ -3755,9 +3755,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"joist-codegen@npm:^1.156.0":
-  version: 1.156.0
-  resolution: "joist-codegen@npm:1.156.0"
+"joist-codegen@npm:^1.160.2":
+  version: 1.160.2
+  resolution: "joist-codegen@npm:1.160.2"
   dependencies:
     "@dprint/formatter": "npm:^0.2.1"
     "@dprint/json": "npm:0.15.6"
@@ -3768,7 +3768,7 @@ __metadata:
     change-case: "npm:^4.1.2"
     fast-glob: "npm:^3.3.2"
     inquirer: "npm:^8.2.6"
-    joist-utils: "npm:1.156.0"
+    joist-utils: "npm:1.160.2"
     jscodeshift: "npm:^0.15.2"
     knex: "npm:^3.1.0"
     pg: "npm:^8.11.5"
@@ -3777,51 +3777,51 @@ __metadata:
     semver: "npm:^7.6.0"
     ts-poet: "npm:^6.8.1"
     zod: "npm:^3.22.4"
-  checksum: 10c0/407dcae642ac8fad129c7ff97f8e3775655fc06cee6c9344f96f143bf50e375d9de5744fbf09ac19323a253f481f93ead7ca6ea68bd2d9da03aa88345710e305
+  checksum: 10c0/9ae226cbab79f25d50aef2b61ecd5df1c73d6861d9c2567f16f5e17e7cf929da621bc1701f64b291132443fa7c02ee6912a34eca1ed162c1967f8b64751db9d5
   languageName: node
   linkType: hard
 
-"joist-orm@npm:1.156.0, joist-orm@npm:^1.156.0":
-  version: 1.156.0
-  resolution: "joist-orm@npm:1.156.0"
+"joist-orm@npm:1.160.2, joist-orm@npm:^1.160.2":
+  version: 1.160.2
+  resolution: "joist-orm@npm:1.160.2"
   dependencies:
     "@types/object-hash": "npm:^3.0.6"
     dataloader: "npm:^2.2.2"
-    joist-utils: "npm:1.156.0"
+    joist-utils: "npm:1.160.2"
     knex: "npm:^3.1.0"
     object-hash: "npm:^3.0.0"
     pg: "npm:^8.11.5"
     pg-types: "npm:^4.0.2"
-  checksum: 10c0/fad15bd73b99ddad8a49cd0b4dd5f2513079c8419a29047e7d7ff2e367056dbe6766080d66cc50c6bd0c917cf81b132f2b69444a6b231c5bdbce1cc93be39550
+  checksum: 10c0/f99c2355360f4328e99eb106feccbda338bd16865efd692bc8442c9cb99987d08916cdde7b2906a4ef87318ba1cab0d640939f5cca1ff22a926171744cd21507
   languageName: node
   linkType: hard
 
-"joist-plugin-join-preloading@npm:^1.156.0":
-  version: 1.156.0
-  resolution: "joist-plugin-join-preloading@npm:1.156.0"
+"joist-plugin-join-preloading@npm:^1.160.2":
+  version: 1.160.2
+  resolution: "joist-plugin-join-preloading@npm:1.160.2"
   peerDependencies:
-    joist-orm: 1.156.0
-  checksum: 10c0/3efef2595152ccb3cf89de54d410d0d36dd51eb8b3113e03f7d7330d8dece158295a4fe5b231740b8606499fa2b47b6bb0975a482a2419929156e5e8b27a28a5
+    joist-orm: 1.160.2
+  checksum: 10c0/21db5071aa99319f365d56d160faf2e1a7241a15f3080c4f1a4e333ddda0e4522f3ae41ac1b4f19b5513fe7708c8d87188e119c987f933b2105ceddc0d356d66
   languageName: node
   linkType: hard
 
-"joist-test-utils@npm:^1.156.0":
-  version: 1.156.0
-  resolution: "joist-test-utils@npm:1.156.0"
+"joist-test-utils@npm:^1.160.2":
+  version: 1.160.2
+  resolution: "joist-test-utils@npm:1.160.2"
   dependencies:
-    joist-orm: "npm:1.156.0"
-    joist-utils: "npm:1.156.0"
-  checksum: 10c0/df494ab6ef54d2b4de27634f0885e26af9b6043d3206660c85478611594235af0c304cb381f9effd25be7c68d47367a899aa3bd509c39d25bf7076658aacfcac
+    joist-orm: "npm:1.160.2"
+    joist-utils: "npm:1.160.2"
+  checksum: 10c0/f1e4b699b7e473b465582e4bf6efe022eab5160f535daae458227001cbe6ad894ff5805eadec2358277f44708ad184f0c11979de751d0fc74b8288a5223c66ca
   languageName: node
   linkType: hard
 
-"joist-utils@npm:1.156.0":
-  version: 1.156.0
-  resolution: "joist-utils@npm:1.156.0"
+"joist-utils@npm:1.160.2":
+  version: 1.160.2
+  resolution: "joist-utils@npm:1.160.2"
   dependencies:
     pg: "npm:^8.11.5"
     pg-connection-string: "npm:^2.6.4"
-  checksum: 10c0/f15a8eb24fd7b1eabbfae1f3cd908804bc75b88590b5518f945b730455c7557b42b6973b87a1f2476a7feb62846d35b7365c7b67a8cbdfaf586d9132441a0af2
+  checksum: 10c0/54103a27039c7ae6d7e613c9e563ec5d62d41f18020a2c8ec5554e719680fa07e0167e8742aa0c52228394a388ea8d2e8b75adaa56554be538cf8b7b00a717f7
   languageName: node
   linkType: hard
 
@@ -5167,10 +5167,10 @@ __metadata:
     env-cmd: "npm:^10.1.0"
     eslint: "npm:^8.57.0"
     eslint-config-next: "npm:14.2.1"
-    joist-codegen: "npm:^1.156.0"
-    joist-orm: "npm:^1.156.0"
-    joist-plugin-join-preloading: "npm:^1.156.0"
-    joist-test-utils: "npm:^1.156.0"
+    joist-codegen: "npm:^1.160.2"
+    joist-orm: "npm:^1.160.2"
+    joist-plugin-join-preloading: "npm:^1.160.2"
+    joist-test-utils: "npm:^1.160.2"
     ms: "npm:^2.1.3"
     next: "npm:14.2.1"
     postcss: "npm:8.4.38"
