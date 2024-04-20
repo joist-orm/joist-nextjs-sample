@@ -3,7 +3,7 @@ import { AuthorPayload } from "@/components/table";
 
 type AuthorCardProps = {
   author: AuthorPayload;
-  addBook: () => void;
+  addBook: (id: string) => Promise<void>;
 };
 
 export async function AuthorCard({ author, addBook }: AuthorCardProps) {
@@ -16,7 +16,7 @@ export async function AuthorCard({ author, addBook }: AuthorCardProps) {
         <div className="space-y-1">
           <p className="font-medium leading-none">{author.firstName}</p>
           <p className="text-sm text-gray-500">{author.books.length} books</p>
-          <button className="text-sm text-gray-500" onClick={() => addBook()}>
+          <button className="text-sm text-gray-500" onClick={() => addBook(author.id)}>
             add book
           </button>
         </div>

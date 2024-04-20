@@ -5,6 +5,7 @@ import { JsonHint, JsonPayload } from "joist-orm";
 import { RefreshButton } from "./refresh-button";
 
 export const authorHint = {
+  id: {},
   firstName: {},
   books: "title",
 } satisfies JsonHint<Author>;
@@ -19,10 +20,10 @@ export async function Table() {
   const users = await em.find(Author, {}, { populate: ["books"] });
   const duration = Date.now() - startTime;
 
-  const addBook = async () => {
+  const addBook = async (id: string) => {
     "use server";
     const em = getEm();
-    const a = await em.load(Author, "a:1");
+    const a = await em.load(Author, id);
     em.create(Book, { author: a, title: "New Book" });
     await em.flush();
   };
