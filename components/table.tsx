@@ -1,7 +1,15 @@
 import { AuthorCard } from "@/components/author-card";
 import { Author, Book } from "@/entities/index";
 import { getEm } from "@/lib/em";
+import { JsonHint, JsonPayload } from "joist-orm";
 import { RefreshButton } from "./refresh-button";
+
+export const authorHint = {
+  firstName: {},
+  books: "title",
+} satisfies JsonHint<Author>;
+
+export type AuthorPayload = JsonPayload<Author, typeof authorHint>;
 
 export async function Table() {
   console.log("RENDERING TABLE");
@@ -31,15 +39,15 @@ export async function Table() {
         <RefreshButton />
       </div>
       <div className="divide-y divide-gray-900/5">
-        {users.map((user) => (
-          <AuthorCard
-            key={user.id}
-            // Currently have to craft the AuthorCard.author props manually, since
-            // the entity itself can't go over the wire.
-            author={{ firstName: user.firstName, books: user.books.get }}
-            addBook={addBook}
-          />
-        ))}
+        {await Promise.all(
+          users.map(async (user) => (
+            <AuthorCard
+              key={user.id}
+              author={await user.toJSON(authorHint)}
+              addBook={addBook}
+            />
+          )),
+        )}
       </div>
     </div>
   );

@@ -1,7 +1,8 @@
 "use client";
+import { AuthorPayload } from "@/components/table";
 
 type AuthorCardProps = {
-  author: { firstName: string; books: readonly { title: string }[] };
+  author: AuthorPayload;
   addBook: () => void;
 };
 
