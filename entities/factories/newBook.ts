@@ -1,6 +1,5 @@
 import { DeepNew, FactoryOpts, newTestInstance, testIndex } from "joist-orm";
-import { Book } from "../entities";
-import type { EntityManager } from "../entities";
+import { Book, type EntityManager } from "../entities";
 
 export function newBook(
   em: EntityManager,
