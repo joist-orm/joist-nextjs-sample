@@ -15,8 +15,13 @@ export async function AuthorCard({ author, addBook }: AuthorCardProps) {
       <div className="flex items-center space-x-4">
         <div className="space-y-1">
           <p className="font-medium leading-none">{author.firstName}</p>
-          <p className="text-sm text-gray-500">{author.books.length} books</p>
-          <button className="text-sm text-gray-500" onClick={() => addBook(author.id)}>
+          <p className="text-sm text-gray-500">
+            {author.books.map((b) => b.title).join(", ")} books
+          </p>
+          <button
+            className="text-sm text-gray-500"
+            onClick={() => addBook(author.id)}
+          >
             add book
           </button>
         </div>
