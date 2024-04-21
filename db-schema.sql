@@ -8,5 +8,5 @@ CREATE TABLE books (
   id serial primary key,
   author_id integer NOT NULL REFERENCES authors (id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED,
   title varchar(255) NOT NULL,
-  forward text
+  foreword text
 );

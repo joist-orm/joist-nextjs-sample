@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "db": "docker compose up -d db --wait && docker compose exec db ./reset.sh",
+    "db": "docker compose up -d db --wait && docker compose exec db ./reset.sh && yarn joist-codegen",
     "psql": "docker compose exec db ./console.sh",
     "joist-codegen": "env-cmd tsx ./node_modules/joist-codegen",
     "seed": "tsx ./seeds/authorWithSomeBooks.ts",

@@ -9,7 +9,7 @@ export async function BookPreview({ book }: BookPreviewProps) {
   const b = await getEm().load(Book, book.id);
   return (
     <div>
-      {book.id} {b.forward}
+      {book.id} {b.foreword}
     </div>
   );
 }
