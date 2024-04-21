@@ -2,9 +2,8 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 
 export const metadata = {
-  title: "Next.js Postgres Demo with Prisma",
-  description:
-    "A simple Next.js app with Postgres as the database and Joist as the ORM",
+  title: "Next.js Demo with Joist",
+  description: "A simple Next.js app with Joist as the ORM",
 };
 
 const inter = Inter({
