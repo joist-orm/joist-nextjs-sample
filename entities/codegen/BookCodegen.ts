@@ -44,11 +44,13 @@ export type BookId = Flavor<string, Book>;
 export interface BookFields {
   id: { kind: "primitive"; type: number; unique: true; nullable: never };
   title: { kind: "primitive"; type: string; unique: false; nullable: never; derived: false };
+  forward: { kind: "primitive"; type: string; unique: false; nullable: undefined; derived: false };
   author: { kind: "m2o"; type: Author; nullable: never; derived: false };
 }
 
 export interface BookOpts {
   title: string;
+  forward?: string | null;
   author: Author | AuthorId;
 }
 
@@ -59,18 +61,21 @@ export interface BookIdsOpts {
 export interface BookFilter {
   id?: ValueFilter<BookId, never> | null;
   title?: ValueFilter<string, never>;
+  forward?: ValueFilter<string, null>;
   author?: EntityFilter<Author, AuthorId, FilterOf<Author>, never>;
 }
 
 export interface BookGraphQLFilter {
   id?: ValueGraphQLFilter<BookId>;
   title?: ValueGraphQLFilter<string>;
+  forward?: ValueGraphQLFilter<string>;
   author?: EntityGraphQLFilter<Author, AuthorId, GraphQLFilterOf<Author>, never>;
 }
 
 export interface BookOrder {
   id?: OrderBy;
   title?: OrderBy;
+  forward?: OrderBy;
   author?: AuthorOrder;
 }
 
@@ -120,6 +125,14 @@ export abstract class BookCodegen extends BaseEntity<EntityManager, string> impl
 
   set title(title: string) {
     setField(this, "title", cleanStringValue(title));
+  }
+
+  get forward(): string | undefined {
+    return getField(this, "forward");
+  }
+
+  set forward(forward: string | undefined) {
+    setField(this, "forward", cleanStringValue(forward));
   }
 
   set(opts: Partial<BookOpts>): void {

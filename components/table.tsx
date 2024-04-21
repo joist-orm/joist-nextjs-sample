@@ -9,7 +9,7 @@ import { RefreshButton } from "./refresh-button";
 export const authorHint = {
   id: {},
   firstName: {},
-  books: "title",
+  books: ["id", "title"],
 } satisfies JsonHint<Author>;
 
 export type AuthorPayload = JsonPayload<Author, typeof authorHint>;

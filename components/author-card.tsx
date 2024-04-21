@@ -1,4 +1,5 @@
-"use client";
+import { Button } from "@/components/add-button";
+import { BookPreview } from "@/components/book-preview";
 import { AuthorPayload } from "@/components/table";
 
 type AuthorCardProps = {
@@ -15,15 +16,12 @@ export async function AuthorCard({ author, addBook }: AuthorCardProps) {
       <div className="flex items-center space-x-4">
         <div className="space-y-1">
           <p className="font-medium leading-none">{author.firstName}</p>
-          <p className="text-sm text-gray-500">
-            {author.books.map((b) => b.title).join(", ")} books
-          </p>
-          <button
-            className="text-sm text-gray-500"
-            onClick={() => addBook(author.id)}
-          >
-            add book
-          </button>
+          <div className="text-sm text-gray-500">
+            {author.books.map((b) => (
+              <BookPreview key={b.id} book={b} />
+            ))}
+          </div>
+          <Button id={author.id} addBook={addBook} />
         </div>
       </div>
     </div>

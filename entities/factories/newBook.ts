@@ -8,5 +8,6 @@ export function newBook(
 ): DeepNew<Book> {
   return newTestInstance(em, Book, opts, {
     title: `Book ${testIndex}`,
+    forward: `a long sentence ${testIndex}`,
   });
 }
