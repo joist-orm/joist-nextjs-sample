@@ -23,3 +23,6 @@ Disclaimer: I've not actually deployed this to Vercel, I just added a local `doc
 * `.env` is a (for demo only) checked-in with the test `DATABASE_URL` for local development
 * `./components/table.tsx` shows doing an `em.find` in a Next.js page
 
+# Todo
+
+Maybe look at [Bemi](https://docs.bemi.io/orms/prisma/#nextjs) for server-side context sharing.
