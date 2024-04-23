@@ -7,6 +7,6 @@ export function newBook(
 ): DeepNew<Book> {
   return newTestInstance(em, Book, opts, {
     title: `Book ${testIndex}`,
-    foreword: `a long sentence ${testIndex}`,
+    foreword: `a good book`,
   });
 }

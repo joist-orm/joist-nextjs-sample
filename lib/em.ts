@@ -12,12 +12,10 @@ declare global {
 const driver = globalThis.globalDriver ?? newDriver();
 if (process.env.NODE_ENV !== "production") globalThis.globalDriver = driver;
 
-// This will be cached pre-request I guess?
-const preloadPlugin = new JsonAggregatePreloader();
-
 /** Returns this request's `EntityManager` instance. */
 export const getEm = cache(() => {
-  return new EntityManager({}, { driver });
+  const preloadPlugin = new JsonAggregatePreloader();
+  return new EntityManager({}, { driver, preloadPlugin });
 });
 
 function newDriver() {

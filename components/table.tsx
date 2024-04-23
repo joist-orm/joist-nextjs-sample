@@ -19,15 +19,19 @@ export async function Table() {
   console.log("RENDERING TABLE");
   const startTime = Date.now();
   const em = getEm();
-  // Issues 1 query to fetch author + books
+  // Issues 1 query to fetch author
   const authors = await em.find(Author, {});
   const duration = Date.now() - startTime;
 
   const addBook = async (id: string) => {
     "use server";
     const em = getEm();
-    const a = await em.load(Author, id);
-    em.create(Book, { author: a, title: "New Book" });
+    const author = await em.load(Author, id);
+    em.create(Book, {
+      author,
+      title: "New Book",
+      foreword: `book from ${author.firstName}`,
+    });
     await em.flush();
   };
 
@@ -35,16 +39,16 @@ export async function Table() {
     <div className="bg-white/30 p-12 shadow-xl ring-1 ring-gray-900/5 rounded-lg backdrop-blur-lg max-w-xl mx-auto w-full">
       <div className="flex justify-between items-center mb-4">
         <div className="space-y-1">
-          <h2 className="text-xl font-semibold">Recent Users</h2>
-          <p className="text-sm text-gray-500">
-            Fetched {authors.length} users in {duration}ms
-          </p>
+          <h2 className="text-xl font-semibold">Authors</h2>
         </div>
+        <p className="text-sm text-gray-500">
+          Fetched {authors.length} authors in {duration}ms
+        </p>
         <RefreshButton />
       </div>
-      <div className="flex gap-5">
+      <div className="flex justify-evenly">
         <div className="divide-y divide-gray-900/5">
-          Client-Side
+          Client-Side Tree
           {authors.map(async (a) => (
             <AuthorRccCard
               key={a.id}
@@ -54,7 +58,7 @@ export async function Table() {
           ))}
         </div>
         <div className="divide-y divide-gray-900/5">
-          Server-Side
+          Server-Side Tree
           {authors.map((a) => (
             <AuthorRscCard key={a.id} author={a} addBook={addBook} />
           ))}

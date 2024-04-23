@@ -8,7 +8,7 @@ type BookPreviewProps = {
 export async function BookRscPreview({ book }: BookPreviewProps) {
   return (
     <div>
-      {book.id} {book.foreword}
+      <div>{book.title} -- {book.foreword}</div>
     </div>
   );
 }
