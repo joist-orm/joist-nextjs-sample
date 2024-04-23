@@ -8,6 +8,7 @@ declare global {
   var globalDriver: undefined | PostgresDriver;
 }
 
+// Use prisma's approach to keep `yarn dev` from using all the local db connections
 const driver = globalThis.globalDriver ?? newDriver();
 if (process.env.NODE_ENV !== "production") globalThis.globalDriver = driver;
 
@@ -23,6 +24,7 @@ function newDriver() {
   const knex = createKnex({
     client: "pg",
     connection: newPgConnectionConfig() as any,
+    // print out queries to stdout for demo purposes
     debug: true,
     asyncStackTraces: true,
   });
