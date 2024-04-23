@@ -19,7 +19,7 @@ export async function Table() {
   const startTime = Date.now();
   const em = getEm();
   // Issues 1 query to fetch author + books
-  const users = await em.find(Author, {}, { populate: ["books"] });
+  const users = await em.find(Author, {}, { populate: {} });
   const duration = Date.now() - startTime;
 
   const addBook = async (id: string) => {

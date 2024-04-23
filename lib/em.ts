@@ -1,4 +1,5 @@
 import { EntityManager } from "@/entities/index";
+import { cache } from "react";
 import { newPgConnectionConfig, PostgresDriver } from "joist-orm";
 import { JsonAggregatePreloader } from "joist-plugin-join-preloading";
 import { knex as createKnex } from "knex";
@@ -12,12 +13,11 @@ if (process.env.NODE_ENV !== "production") globalThis.globalDriver = driver;
 
 // This will be cached pre-request I guess?
 const preloadPlugin = new JsonAggregatePreloader();
-const em = new EntityManager({}, { driver, preloadPlugin });
 
 /** Returns this request's `EntityManager` instance. */
-export function getEm() {
-  return em;
-}
+export const getEm = cache(() => {
+  return new EntityManager({}, { driver });
+});
 
 function newDriver() {
   const knex = createKnex({
